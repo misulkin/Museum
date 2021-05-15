@@ -1,0 +1,279 @@
+/*Обнуление*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+
+/*--------------------*/
+@font-face {
+	font-family: 'Oswald';
+	src: url('../fonts/Oswald-Regular.eot');
+	src: local('☺'), url('../fonts/Oswald-Regular.woff') format('woff'), url('../fonts/Oswald-Regular.ttf') format('truetype'), url('../fonts/Oswald-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Oswald';
+	src: url('../fonts/Oswald-Medium.eot');
+	src: local('☺'), url('../fonts/Oswald-Medium.woff') format('woff'), url('fonts/Oswald-Medium.ttf') format('truetype'), url('../fonts/Oswald-Medium.svg') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Oswald';
+	src: url('../fonts/Oswald-Bold.eot');
+	src: local('☺'), url('../fonts/Oswald-Bold.woff') format('woff'), url('../fonts/Oswald-Bold.ttf') format('truetype'), url('../fonts/Oswald-Bold.svg') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/*fonts*/
+#wrapper {
+	margin: auto 0;
+	background-color: #6a5e86;
+}
+
+header {
+	background-color: rgba(45, 40, 56, .95);
+}
+
+.header,
+.header__nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header {
+	margin: 0 10%;
+}
+
+.header__links {
+	margin: 10px;
+	padding: 15px;
+	font-size: 20px;
+	font-family: 'Oswald';
+	font-weight: normal;
+	text-align: center;
+	border: white 3px solid;
+	color: whitesmoke;
+}
+
+.header__links:hover {
+	background-color: whitesmoke;
+	color: #2d2838;
+}
+
+a:visited {
+	color: whitesmoke;
+}
+
+/*добавь класс сылкам*/
+
+.header__form {
+	background: rgba(45, 40, 56, .95);
+	margin: 0 30px;
+}
+
+.header__form:after {
+	content: "";
+	display: table
+}
+
+.header__form form {
+	width: auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.header__form input {
+	width: 180px;
+	height: 42px;
+	padding-left: 15px;
+	border-radius: 42px;
+	border: 2px solid rgba(125, 125, 128, 0.95);
+	background: whitesmoke;
+	outline: none;
+	position: relative;
+	transition: .3s linear;
+}
+
+.header__form input:focus {
+	width: 250px;
+}
+
+.header__form button {
+	width: 42px;
+	height: 42px;
+	background-image: url(../img/search.png);
+	background-size: cover;
+	border: none;
+	background-color: rgba(45, 40, 56, .95);
+}
+
+.stage {
+	margin: 4% 15%;
+	display: flex;
+	flex-direction: column;
+}
+
+.stage__container {
+	display: flex;
+	flex-direction: row;
+}
+
+.stage__container:hover .stage__main {
+	color: rgb(45, 40, 60);
+	background-color: white;
+
+}
+
+.stage__container:hover .stage__content {
+	/*background-image: url('/img/console.jpg');
+	Поменять фон на блюр*/
+	background-image: none;
+	background-color: blueviolet;
+	background-position: center;
+	background-size: cover;
+}
+
+
+.stage__container:hover .stage__uppertext {
+	opacity: 1;
+
+}
+
+.stage__container:hover .stage__text {
+	opacity: 1;
+
+}
+
+.stage__content {
+	display: flex;
+	flex-direction: column;
+	background-image: url('/img/console.jpg');
+	background-position: center;
+	background-size: cover;
+	border-radius: 0 10px 10px 0;
+	color: black;
+	/*Нужно поменять картинку*/
+}
+
+
+.stage__main {
+	padding: 4%;
+	width: 30%;
+	font-size: calc(1rem + 6vw);
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(45, 40, 56, .95);
+	border-radius: 10px 0 0 10px;
+
+}
+
+.stage__uppertext {
+	font-size: 32px;
+	margin: 10px 10px;
+	font-family: 'Oswald';
+	font-weight: bold;
+	opacity: 0.3;
+}
+
+.stage__text {
+	font-size: 20px;
+	font-family: 'Oswald';
+	font-weight: normal;
+	margin: 10px 10% 10px 10px;
+	opacity: 0;
+	color: rgb(45, 40, 60);
+}
