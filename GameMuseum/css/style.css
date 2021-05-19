@@ -220,8 +220,8 @@ a:visited {
 .stage__container:hover .stage__content {
 	/*background-image: url('/img/console.jpg');
 	Поменять фон на блюр*/
-	background-image: none;
-	background-color: blueviolet;
+	background-image: filter url(../img/search.png), blur (20px);
+	background-size: cover;
 	background-position: center;
 	background-size: cover;
 }
@@ -240,11 +240,11 @@ a:visited {
 .stage__content {
 	display: flex;
 	flex-direction: column;
+	border-radius: 0 10px 10px 0;
+	color: black;
 	background-image: url('../img/console.jpg');
 	background-position: center;
 	background-size: cover;
-	border-radius: 0 10px 10px 0;
-	color: black;
 	/*Нужно поменять картинку*/
 }
 
@@ -299,4 +299,78 @@ a:visited {
 	margin-bottom: 5px;
 	font-size: medium;
 	font-weight: 600;
+}
+
+.generetion {
+	display: flex;
+	flex-direction: column;
+	margin: 0 15%;
+}
+
+.generetion__nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.generetion__text {
+	display: flex;
+	flex-direction: column;
+}
+
+.generetion__name {
+	font-size: 56px;
+	color: whitesmoke;
+	font-family: 'Oswald';
+	font-weight: normal;
+}
+
+.generetion__date {
+	font-size: 20px;
+	color: whitesmoke;
+	margin: 5px;
+}
+
+.generetion__arrows:link {
+	color: whitesmoke;
+
+}
+
+.generetion__arrows:active {
+	color: rgb(50, 50, 50);
+}
+
+.material-icons {
+	font-size: 56px;
+}
+
+.material-icons:hover {
+	position: relative;
+	transform: scale(1.2);
+}
+
+.consoles__interlude {
+	display: flex;
+	flex-direction: column;
+}
+
+.consoles__discription {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.consoles__text {
+	font-size: 24px;
+	color: rgb(255, 255, 255);
+	font-family: 'Oswald';
+	font-weight: normal;
+}
+
+.consoles__img {
+	width: 200px;
+	height: auto;
 }
